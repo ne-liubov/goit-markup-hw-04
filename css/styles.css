@@ -66,8 +66,7 @@ ul {
     color: #404bbf;
 }
 
-.li-nav:hover::after, 
-.li-nav:focus::after {
+.li-nav::after {
     content: '';
     width: 100%;
     position: absolute; 
@@ -76,6 +75,13 @@ ul {
     height: 4px;
     background-color: #404bbf;
     border-radius: 2px;
+    opacity: 0;
+}
+
+.li-nav:hover::after, 
+.li-nav:focus::after,
+.li-nav.current::after {
+    opacity: 1;
 }
 
 .ul-address {
